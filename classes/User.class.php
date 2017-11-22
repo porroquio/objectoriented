@@ -6,7 +6,7 @@ class User {
 // Attributes: username, password, email, firstname, lastname, dateofbirth
     public $username;
     private $password;
-    public $email;
+    private $email;
     public $firstname;
     public $lastname;
     private $dateofbirth;
@@ -18,22 +18,48 @@ class User {
             $this -> email = $newEmail;
     }
 
-    function changeEmail($newEmail){
-        $this -> email = $newEmail;
+
+
+
+
+
+
+    function setEmail($newEmail){
+        if (filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
+            $this -> email = $newEmail;
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    function getEmail(){
+        return $this->email;
+    }
+    
+    
+    
+    
+    
+    
+    
+    function setPassword($newPassword){
+        
+            //TO DO: Validate password: more than 7 characters & it must have letters and numbers
+            $this -> email = $newPassword;
+            
     }
 
 
+
+
+
+
 // Methods:
-//  changeEmail(string email),
-//  calculateAge (date),
-//  createUser(string name, string lastname, string username, string password),
-//  deleteUser(),
-//  updateUser(string firstname, string lastname)
-    
-    
-    
-    
-    
+//  __construct(string username, string firstname, string lastname, string email),
+//  setEmail(string email), getEmail(),
+//  setAttribute(attribute), getAttribute(),
+//  calculateAge (date)
     
     
 }
