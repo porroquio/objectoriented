@@ -58,8 +58,10 @@ class User {
 // Methods:
 //  __construct(string username, string firstname, string lastname, string email),
 //  setEmail(string email), getEmail(),
+//  TO DO
 //  setAttribute(attribute), getAttribute(),
-//  calculateAge (date)
+//  setDateOfBirth(DateTime date),
+//  calculateAge()
     
     
 }
